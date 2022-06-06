@@ -19,7 +19,7 @@ import img14 from '/src/assets/icons/storm.svg';
 import img15 from '/src/assets/icons/snow-day.svg';
 import img16 from '/src/assets/icons/snow-night.svg';
 import img17 from '/src/assets/icons/mist-day.svg';
-import img19 from '/src/assets/icons/mist-night.svg';
+import img18 from '/src/assets/icons/mist-night.svg';
 
 // export const WeatherIcons = {
 //   "01d": "./src/assets/icons/sunny.svg",
