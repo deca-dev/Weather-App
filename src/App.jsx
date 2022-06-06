@@ -4,24 +4,24 @@ import axios from 'axios'
 import 'boxicons'
 
 export const WeatherIcons = {
-  "01d": './src/assets/icons/sunny.svg',
-  "01n": './src/assets/icons/night.svg',
-  "02d": './src/assets/icons/day.svg',
-  "02n": './src/assets/icons/cloudy-night.svg',
-  "03d": './src/assets/icons/cloudy.svg',
-  "03n": './src/assets/icons/cloudy.svg',
-  "04d": './src/assets/icons/perfect-day.svg',
-  "04n": './src/assets/icons/cloudy-night.svg',
-  "09d": './src/assets/icons/rain.svg',
-  "09n": './src/assets/icons/rain-night.svg',
-  "10d": './src/assets/icons/rain.svg',
-  "10n": './src/assets/icons/rain-night.svg',
-  "11d": './src/assets/icons/storm.svg',
-  "11n": './src/assets/icons/storm.svg',
-  "13d": './src/assets/icons/snow-day.svg',
-  "13n": './src/assets/icons/snow-night.svg',
-  "50d": './src/assets/icons/mist-day.svg',
-  "50n": './src/assets/icons/mist-night.svg'
+  "01d": '/icon/sunny.svg',
+  "01n": '/icon/night.svg',
+  "02d": '/icon/day.svg',
+  "02n": '/icon/cloudy-night.svg',
+  "03d": '/icon/cloudy.svg',
+  "03n": '/icon/cloudy.svg',
+  "04d": '/icon/perfect-day.svg',
+  "04n": '/icon/cloudy-night.svg',
+  "09d": '/icon/rain.svg',
+  "09n": '/icon/rain-night.svg',
+  "10d": '/icon/rain.svg',
+  "10n": '/icon/rain-night.svg',
+  "11d": '/icon/storm.svg',
+  "11n": '/icon/storm.svg',
+  "13d": '/icon/snow-day.svg',
+  "13n": '/icon/snow-night.svg',
+  "50d": '/icon/mist-day.svg',
+  "50n": '/icon/mist-night.svg'
 }
 
 
