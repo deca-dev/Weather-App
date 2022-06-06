@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,900;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.App {
+    background-image: url('/src/assets/images/sunny.avif');
+    background-size: cover;
+    background-position: bottom;
+    transition: 1 ease-out;
+}
+
+.App.clouds {
+    background-image: url('/src/assets/images/cloudy.avif');
+}
+
+main {
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
+    padding: 25px;
+}
+
+.search-box {
+    width: 100%;
+    margin: 0 0 75px;
+}
+
+.search-box .search-bar {
+    display: block;
+    width: 100%;
+    padding: 15px;
+
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+    color: #313131;
+    font-size: 20px;
+    transition: 0.4 ease;
+}
+
+.search-box .search-bar:focus {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.weatherinfo {
+    min-width: 335px;
+    max-width: 600px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 15px 25px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+    box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.location-box {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.location-box .location {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+.location-box .date {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+
+}
+
+.weather-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.weather-box .temp {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+    display: inline-block;
+
+}
+
+.weather-box .weather {
+    color: #fff;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.weatherLogo {
+    display: flex;
+    align-content: center;
+}
+
+.weatherLogo img {
+    width: 100px;
+    aspect-ratio: 1;
+    margin-left: 20px;
+}
+
+.weather-detail-info {
+    margin: 30px 0 5px 0;
+}
+
+.weather-detail-info .box-icon svg {
+    color: #fff;
+}
+
+.weather-detail-info {
+    height: 150px;
+    /* font-size: 16px; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-detail-info .detailed-info svg {
+    width: 10px;
+}
+
+.humidity-container,
+.windSpeed-container,
+.clouds-container,
+.sensation-container {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    text-align: start;
+
+}
+
+.humidity-value-description,
+.windSpeed-value-description,
+.clouds-value-description,
+.sensation-value-description {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: start;
+    margin-left: 8px;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #313131;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    width: 210px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+@media screen and (min-width: 300px) {
+
+    .weather-box{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .weather-box .temp {
+        color: #fff;
+        font-size: 50px;
+        font-weight: 500;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .weather-box .weather{
+        font-size: 30px;
+    }
+}
