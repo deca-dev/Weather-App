@@ -2,49 +2,66 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import axios from 'axios'
 import 'boxicons'
+import img1 from '/src/assets/icons/sunny.svg';
+import img2 from '/src/assets/icons/night.svg';
+import img3 from '/src/assets/icons/day.svg';
+import img4 from '/src/assets/icons/cloudy-night.svg';
+import img5 from '/src/assets/icons/cloudy.svg';
+import img6 from '/src/assets/icons/cloudy.svg';
+import img7 from '/src/assets/icons/perfect-day.svg';
+import img8 from '/src/assets/icons/cloudy-night.svg';
+import img9 from '/src/assets/icons/rain.svg';
+import img10 from '/src/assets/icons/rain-night.svg';
+import img11 from '/src/assets/icons/rain.svg';
+import img12 from '/src/assets/icons/rain-night.svg';
+import img13 from '/src/assets/icons/storm.svg';
+import img14 from '/src/assets/icons/storm.svg';
+import img15 from '/src/assets/icons/snow-day.svg';
+import img16 from '/src/assets/icons/snow-night.svg';
+import img17 from '/src/assets/icons/mist-day.svg';
+import img19 from '/src/assets/icons/mist-night.svg';
+
+// export const WeatherIcons = {
+//   "01d": "./src/assets/icons/sunny.svg",
+//   "01n": "./src/assets/icons/night.svg",
+//   "02d": "./src/assets/icons/day.svg",
+//   "02n": "./src/assets/icons/cloudy-night.svg",
+//   "03d": "./src/assets/icons/cloudy.svg",
+//   "03n": "./src/assets/icons/cloudy.svg",
+//   "04d": "./src/assets/icons/perfect-day.svg",
+//   "04n": "./src/assets/icons/cloudy-night.svg",
+//   "09d": "./src/assets/icons/rain.svg",
+//   "09n": "./src/assets/icons/rain-night.svg",
+//   "10d": "./src/assets/icons/rain.svg",
+//   "10n": "./src/assets/icons/rain-night.svg",
+//   "11d": "./src/assets/icons/storm.svg",
+//   "11n": "./src/assets/icons/storm.svg",
+//   "13d": "./src/assets/icons/snow-day.svg",
+//   "13n": "./src/assets/icons/snow-night.svg",
+//   "50d": "./src/assets/icons/mist-day.svg",
+//   "50n": "./src/assets/icons/mist-night.svg"
+// }
 
 export const WeatherIcons = {
-  "01d": '/icon/sunny.svg',
-  "01n": '/icon/night.svg',
-  "02d": '/icon/day.svg',
-  "02n": '/icon/cloudy-night.svg',
-  "03d": '/icon/cloudy.svg',
-  "03n": '/icon/cloudy.svg',
-  "04d": '/icon/perfect-day.svg',
-  "04n": '/icon/cloudy-night.svg',
-  "09d": '/icon/rain.svg',
-  "09n": '/icon/rain-night.svg',
-  "10d": '/icon/rain.svg',
-  "10n": '/icon/rain-night.svg',
-  "11d": '/icon/storm.svg',
-  "11n": '/icon/storm.svg',
-  "13d": '/icon/snow-day.svg',
-  "13n": '/icon/snow-night.svg',
-  "50d": '/icon/mist-day.svg',
-  "50n": '/icon/mist-night.svg'
+  "01d": img1,
+  "01n": img2,
+  "02d": img3,
+  "02n": img4,
+  "03d": img5,
+  "03n": img6,
+  "04d": img7,
+  "04n": img8,
+  "09d": img9,
+  "09n": img10,
+  "10d": img11,
+  "10n": img12,
+  "11d": img13,
+  "11n": img14,
+  "13d": img15,
+  "13n": img16,
+  "50d": img17,
+  "50n": img18
 }
-
-
-// export const WeatherBackgrounds = {
-//   "01d": './src/assets/icons/sunny.svg',
-//   "01n": './src/assets/icons/night.svg',
-//   "02d": './src/assets/icons/day.svg',
-//   "02n": './src/assets/icons/cloudy-night.svg',
-//   "03d": './src/assets/icons/cloudy.svg',
-//   "03n": './src/assets/icons/cloudy.svg',
-//   "04d": './src/assets/icons/perfect-day.svg',
-//   "04n": './src/assets/icons/cloudy-night.svg',
-//   "09d": './src/assets/icons/rain.svg',
-//   "09n": './src/assets/icons/rain-night.svg',
-//   "10d": './src/assets/icons/rain.svg',
-//   "10n": './src/assets/icons/rain-night.svg',
-//   "11d": './src/assets/icons/storm.svg',
-//   "11n": './src/assets/icons/storm.svg',
-//   "13d": './src/assets/icons/snow-day.svg',
-//   "13n": './src/assets/icons/snow-night.svg',
-//   "50d": './src/assets/icons/mist-day.svg',
-//   "50n": './src/assets/icons/mist-night.svg',
-// }
 
 
 function App() {
@@ -88,7 +105,7 @@ function App() {
     }
   }
 
-  console.log(weather?.timezone);
+  console.log(weather?.weather[0].icon);
 
 
   const dateBuilder = (d) => {
@@ -102,14 +119,12 @@ function App() {
     return `${day} ${date} ${month} ${year}`
   }
 
-  // let timeZoneCode = {weather?.timezone}
-
   return (
 
     <div className={
       (typeof weather?.main != 'undefined') ? ((weather?.weather[0].main == ('Clouds' || 'Rain' || 'Snow')) ? 'App clouds' : 'App')
-         : 'App'
-      }>
+        : 'App'
+    }>
       <main>
         <div className="search-box">
           <input
@@ -126,7 +141,7 @@ function App() {
             <div className="temp">{`${Math.round(weather?.main.temp)} ${isBoolean ? '°C' : '°F'}`}</div>
             <div className="weather"> | {weather?.weather[0].description}</div>
             <div className="weatherLogo">
-              <img src={WeatherIcons[weather?.weather[0].icon]} alt="" />
+              <img src={WeatherIcons[weather?.weather[0].icon]} alt="weather logo" />
             </div>
           </div>
           <div className="location-box">
@@ -165,8 +180,8 @@ function App() {
             <div className="sensation-container">
               <span className="sensation detailed-info"><box-icon name='thermometer' type='solid' color='#ffffff' ></box-icon></span>
               <div className='sensation-value-description'>
-              <span className="sensation-value">{`${weather?.main.feels_like} ${isBoolean ? '°C' : '°F'}`}</span>
-              <span className="sensation-description">Feels like</span>
+                <span className="sensation-value">{`${weather?.main.feels_like} ${isBoolean ? '°C' : '°F'}`}</span>
+                <span className="sensation-description">Feels like</span>
               </div>
             </div>
           </div>
